@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+        div{
+            background-color: beige;
+        }
+        .d1{
+            width: 300px;
+            height: 300px;
+            /* top, right bottom, left : 10px; */
+            /* margin: 10px; */
+
+            /* top,bottom : 20px, left, right : 40px */
+            /* margin:20px 40px; */
+
+            /* top:10px right: 20px bottom: 30px left: 20px */
+            /* margin : 10px 20px 30p; */
+            
+            /* top:10px right: 20px bottom: 30px left: 40px*/
+            /* margin: 10px 20px 30px 40px; */
+
+            /* margin-top: 50px;
+            margin-left: 100px;
+            margin-bottom: 100px;
+            margin-right: 25px; */
+
+            text-align: center;
+            line-height: 300px;
+
+            /* 위 30px 뛰우고 좌우를 중앙으로 맞춰줌(margin이 있는 경우에만 해당) */
+            margin:30px auto
+
+        }
+        .parent{
+            width : 300px;
+            height: 300px;
+            position: relative;
+        }
+        .son{
+            width: 150px;
+            height: 150px;
+            background-color: bisque;
+            /* margin-top: 50px;
+            margin-left: 50px; */
+            /* margin:10px auto; */
+
+            position: absolute;
+            top: 0px; left: 0px; right: 0px; bottom: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1" style="text-align: center;">HELLO WORLD</div>
+    <div>HELLO WORLD</div>
+    <hr/>
+    <div class="parent">
+        <div class= "son"></div>
+    </div>
+
+</body>
+</html>
