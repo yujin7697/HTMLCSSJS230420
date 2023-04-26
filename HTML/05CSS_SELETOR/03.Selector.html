@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin-left: 20px;}
+        .c1{border: 1px solid gray;}
+        .c2{border: 1px solid skyblue;}
+        .c3{border: 1px solid pink;}
+
+        /* ~ : 동위 선택자, 같은 Depth의 하위 모든 선택자*/
+        /* + : 동위 선택자, 같은 Depth의 하위 1개 선택자*/
+        .c1>p{
+            background-color: gray;
+        }
+        .c2~p{
+            color: white;
+        }
+        .c2+p{
+            font-size: 0.5rem;
+        }
+        /* .c2의 하위 모든 p태그 */
+        .c2 p{
+            color: blueviolet;
+        }
+        .c2>p{
+            background-color: skyblue;
+        }
+        .c3~p{
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <p> 1 찌오 </p>
+        <div class = "c2">
+            <p>2 찌오</p>
+            <div class="c3">
+                <p>3 찌오</p>
+                <p>4 찌오</p>
+                <p>5 찌오</p>
+            </div>
+            <p>6 찌오</p>
+            <p>7 찌오</p>
+        </div>
+        <p>8 찌오</p>
+        <p>9 찌오</p>
+
+    </div>
+</body>
+</html>
