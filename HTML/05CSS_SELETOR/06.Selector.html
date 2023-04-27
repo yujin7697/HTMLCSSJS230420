@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            ::before : contents영역 앞에 표시할 스타일
+            ::after : contents영역 뒤에 표시할 스타일
+        */
+        .d1{
+            width: 400px;height: 200px;background-color: beige;
+            text-align: center;
+            line-height: 200px;
+        }
+        .d1::before{
+            content:'';
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border: 1px solid grey;
+            background-color: red;
+            background-image: url('./image/female_FILL0_wght400_GRAD0_opsz48.svg');
+            background-size: 100%;
+        }
+        .d1::after{
+            content: '';
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border: 1px solid grey;
+            background-color: blue;
+            background-image: url('./image/male_FILL0_wght400_GRAD0_opsz48.svg');
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">찌오 찌오 찌오 찌오</div>
+</body>
+</html>

@@ -46,14 +46,64 @@
             background-color: lightgray;
 
         }
-        
-        
-       
+        .d1{
+            width: 0px;
+            border-bottom: 1px solid;
+            transition: 0.7s;
+        }
+        .d1:hover{
+            width: 150px;
+            border-bottom: 1px solid transparent;
+            border-image: linear-gradient(to right,red,orange, yellow, green, blue,indigo,purple);
+            border-image-slice: 1;
+        }
+        .d1>input{
+            border: 0px;
+            outline: 0px;
+        }
+       .d2{}
+       .d2>input{}
+       .d2>label{}
+       .d2>input[type="checkbox"]:checked+label{
+         color:gray;
+         text-decoration: line-through;
+       }
+       .d3{}
+       .d3>input[type="checkbox"]{}
+       .d3>input[type="text"]{}
     </style>
 </head>
 <body>
 
-    <a href="#" id="a1" class="btn btn--primary">찌오</a>
-    <a href="##" id="a2" class="btn btn--secondary">찌오</a>
+    <a href="####" id="a1" class="btn btn--primary">찌오</a>
+    <a href="######" id="a2" class="btn btn--secondary">찌오</a>
+    <hr/> 
+
+    <div class="d1"><input type="text"></div>
+    <hr/>
+
+    <div class="d2">
+        <input type="checkbox" checked><label>체크박스테스트</label>
+    </div>
+    <hr/>
+    <div class="d3">
+        <input type="checkbox" id="chk" class="chk">
+        <input type="text" id="txt" class ="txt" disabled>
+    </div>
+
+    <script>
+        const chkEl = document.querySelector('.chk');
+        const txtEl = document.querySelector('.txt');
+        chkEl.addEventListener('change',function(){
+            // alert("동작확인!");
+            if(this.checked){
+                txtEl.disabled=false;
+            }
+            else{
+                txtEl.disabled=true;
+            }
+        });
+
+    </script>
 </body>
 </html>
