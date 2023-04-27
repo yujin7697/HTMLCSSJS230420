@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            :first-child    :첫번째 자식요소
+            :last-child     :마지막 자식요소
+            :nth-child(n)    :n번째 자식요소
+        */
+        *{}
+        body{}
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            /* display: block; */
+        }
+        li{
+
+        }
+       
+        .depth1{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .depth1>li{
+            width: 120px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .depth1>li:first-child{
+            /* background-color: beige; */
+        }
+        .depth1>li>a{}
+        .depth1>li>a:first-child{
+            background-color: bisque;
+        }
+        .depth1>li>.depth2{
+            width: 120px;
+        }
+        .depth1>li>.depth2>li{}
+        .depth1>li>.depth2>li>a{}
+        .depth1>li>.depth2>li:first-child{
+            /* background-color: skyblue; */
+        }
+        .depth1>li>.depth2>li:last-child{
+            /* background-color: lightblue; */
+        }
+
+        .depth1>li>.depth2>li:nth-child(2n){
+            /* background-color: lightcoral; */
+        }
+        .depth1>li>.depth2>li:nth-child(4){
+            /* background-color: lightcyan; */
+        }
+        .depth1>li>.depth2>li:nth-child(2n+1){
+            /* background-color: lightcyan; */
+        }
+        .depth1>li>.depth2>li:nth-child(even){
+            background-color: lightcoral;
+        }
+        .depth1>li>.depth2>li:nth-child(odd){
+            background-color: lightcyan;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="depth1">
+        <li>
+            <a href="">ZziO1</a>
+            <ul class="depth2">
+                <li><a href="">subZziO1</a></li>
+                <li><a href="">subZziO2</a></li>
+                <li><a href="">subZziO3</a></li>
+                <li><a href="">subZziO4</a></li>
+                <li><a href="">subZziO5</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">ZziO2</a>
+            <ul class="depth2">
+                <li><a href="">subZziO6</a></li>
+                <li><a href="">subZziO7</a></li>
+                <li><a href="">subZziO8</a></li>
+                <li><a href="">subZziO9</a></li>
+                <li><a href="">subZziO10</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">ZziO3</a>
+            <ul class="depth2"> 
+                <li><a href="">subZziO11</a></li>
+                <li><a href="">subZziO12</a></li>
+                <li><a href="">subZziO13</a></li>
+                <li><a href="">subZziO14</a></li>
+                <li><a href="">subZziO15</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">ZziO4</a>
+            <ul class="depth2">
+                <li><a href="">subZziO16</a></li>
+                <li><a href="">subZziO17</a></li>
+                <li><a href="">subZziO18</a></li>
+                <li><a href="">subZziO19</a></li>
+                <li><a href="">subZziO20</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
