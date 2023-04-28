@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0px;}
+        ul{
+            list-style: none;
+            padding: 0px;
+        }
+        header{
+            height: 90px;
+            line-height: 90px;
+            border: 1px solid gray;
+            display: flex;
+        }
+        header>.header--logo>img{}
+        /* 헤더gnb */
+        header>.gnb{}
+        header>.gnb>.one--depth{
+            width: 1000px;
+            display: flex;
+            justify-content: right;
+        }
+        header>.gnb>.one--depth>li{
+            width: 120px;
+            height: 90px;
+            line-height: 90px;
+            border: 1px solid black;
+            text-align: center;
+            position: relative;
+
+        }
+        header>.gnb>.one--depth>li>a{
+            width: 120px;
+            height: 90px;
+            display: block;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+        header>.gnb>.one--depth>li>.two--depth{
+            border: 1px solid black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+        }
+        header>.gnb>.one--depth>li>.two--depth>li{
+            height: 35px;
+        }
+        header>.gnb>.one--depth>li>.two--depth>li>a{
+            
+        }
+        header>.gnb--link{}
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header--logo">LOGO<img src="http://www.mjvisiontech.com/theme/mj/img/common/logo.svg" alt="">
+        </div>
+        <nav class="gnb">
+            <ul class="one--depth">
+                <li>
+                    <a href="">about</a>
+                    <ul class="two--depth">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=""></a>
+                    <ul class="two--depth">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=""></a>
+                    <ul class="two--depth">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=""></a>
+                    <ul class="two--depth">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="gnb--link">GNB--LINK</div>
+    </header>
+</ul>
+</body>
+
+</html>

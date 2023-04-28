@@ -10,7 +10,11 @@
         body{}
         ul{list-style: none;padding: 0px;}
         a{text-decoration: none;color: black;}
-        .main찌오{border: 1px solid black;}
+        .main찌오{
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+        }
         .main찌오>li{
             border: 1px solid green;
             width: 120px;
@@ -29,6 +33,7 @@
             left: 0;
             top: 30px;
             width: 100%;
+            display: none;
         }
         .main찌오>li>.sub찌오>li{
             border: 1px solid lightblue;
@@ -37,10 +42,40 @@
         .main찌오>li>.sub찌오>li>a{
             display: block;
         }
+        .main찌오:hover .sub찌오{
+            display: block;
+        }
+        .main찌오>li::after{
+            content: '';
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            top: 50px;
+            background-color: antiquewhite;
+            z-index: -2;
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <!-- 
+        1. .main>li>a>.sub>li*5>a 
+        2. 기본 스타일 설정
+        3. .main>li position    : relative
+        4. .sub position    : absolute
+        5. .main>li:hover .sub
+        6. etc..
+    -->
     <ul class="main찌오">
+        <li>
+            <a href="">main찌오</a>
+            <ul class="sub찌오">
+                <li><a href="">sub찌오1</a></li>
+                <li><a href="">sub찌오2</a></li>
+                <li><a href="">sub찌오3</a></li>
+                <li><a href="">sub찌오4</a></li>
+            </ul>
+        </li>
         <li>
             <a href="">main찌오</a>
             <ul class="sub찌오">

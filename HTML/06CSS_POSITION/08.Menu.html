@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{}
+        body{}
+        a{}
+        ul{list-style: none;padding: 0px;}
+        .one--depth{
+            border: 1px solid black;
+            width: 200px;
+        }
+        .one--depth>li{
+            border: 1px solid lightcoral;
+            position: relative;
+        }
+        .one--depth>li>a{
+            border: 1px solid lightgray;display: block;
+
+        }
+        .one--depth>li>.two--depth{
+            border: 1px solid beige;
+            position: absolute;
+            width: 100%;
+            left: 200px;
+            top: 0px;
+            display: none;
+        }
+        .one--depth>li>.two--depth>li{}
+        .one--depth>li>.two--depth>li>a{}
+        .one--depth>li:hover .two--depth{
+            display: block;
+        }
+        .one--depth>li>.two--depth>li>.three--depth{
+            background-color: antiquewhite;
+            position: absolute;
+            width: 100%;
+            left: 200px;
+            top: 0px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="one--depth">
+        <li>
+            <a href="">MENU1</a>
+            <ul class="two--depth">
+                <li>
+                    <a href="">SUBMENU1</a>
+                    <ul class="three--depth">
+                        l
+                    </ul>
+                </li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+                <li><a href="">SUBMENU4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">MENU2</a>
+            <ul class="two--depth">
+                <li><a href="">SUBMENU1</a></li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+                <li><a href="">SUBMENU4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">MENU3</a>
+            <ul class="two--depth">
+                <li><a href="">SUBMENU1</a></li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+                <li><a href="">SUBMENU4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">MENU4</a>
+            <ul class="two--depth">
+                <li><a href="">SUBMENU1</a></li>
+                <li><a href="">SUBMENU2</a></li>
+                <li><a href="">SUBMENU3</a></li>
+                <li><a href="">SUBMENU4</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
