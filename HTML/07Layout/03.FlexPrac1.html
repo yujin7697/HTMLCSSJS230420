@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style:none;
+            padding:0px;
+        }
+        .wrapper{
+            border: 1px solid black;
+        }
+        .wrapper>header>.top-header{
+            border: 1px solid black;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .wrapper>header>.top-header>.logo{
+            height:30px;
+            width:100px;
+            align-content:center;
+            border : 1px solid gray;
+            text-align:center;
+            line-height:30px;
+        }
+        .wrapper>header>.top-header>.logo>ul{
+            border: 1px solid black;
+        }
+        .wrapper>header>.top-header>.logo>ul>li{
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .wrapper>header>.top-header>ul{
+            border:1px solid gray;
+            display:flex;
+            justify-content: right;
+            align-items: center;
+        }
+        .wrapper>header>nav{
+            border: 1px solid black;
+        }
+        .wrapper>header>nav>ul>li{
+            border: 1px solid black;
+            display:flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>  
+   <div class="wrapper">
+    <header>
+        <div class="top-header">
+            <div class="logo">LOGO</div>
+             <ul>
+                <li><a href="">나의정보</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">로그아웃</a></li>
+                <li><a href="">기타등등</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">MENU1</a></li>
+                <li><a href="">MENU2</a></li>
+                <li><a href="">MENU3</a></li>
+                <li><a href="">MENU4</a></li>
+                <li><a href="">MENU5</a></li>
+                <li><a href="">MENU6</a></li>
+            </ul>
+        </nav>
+    </header>
+   </div>
+</body>
+</html>
