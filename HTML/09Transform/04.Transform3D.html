@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 300px;
+        }
+        .container{
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+            position: relative;
+            text-align: center;
+        }
+        .container>.item{
+            width: 100px;
+            height: 100px;
+            background-color: lightcyan;
+            font-size: 60px;
+            text-align: center;
+            line-height: 100px;
+            transition: 1s;
+            position: absolute;
+            left: 0;top: 0;
+        }
+        .container:hover .item{
+            transform: perspective(100px) rotateY(180deg);
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        배고파요 배고파
+        <div class="item">장</div>
+    </div>
+</body>
+</html>

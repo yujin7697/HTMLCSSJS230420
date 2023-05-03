@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;height: 40px;background-color: beige;
+            color: black;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid;
+        }
+        .d1{
+            animation-name: moving1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .d2{
+            animation-name: moving2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes moving1{
+            from{margin-left: 100vw;}
+            to{margin-left: 0vw;}
+        }
+        @keyframes moving2{
+            from{margin-top: 0vw;}
+            to{margin-top: 100vw;}
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">♥Fuxk♥</div>
+    <div class="d2">♥You♥</div>
+</body>
+</html>
