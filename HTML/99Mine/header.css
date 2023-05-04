@@ -1,0 +1,96 @@
+.wrapper>header {
+}
+
+.wrapper>header>.top-header {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper>header>.top-header>.logo {
+    border: 1px solid;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.wrapper>header>.top-header>ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper>header>.top-header>ul>li {
+    height: 25px; width: 60px;
+    border: 1px solid;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    flex-shrink: 1;
+    margin-right: 5px;
+}
+
+
+.wrapper>header>.top-header>ul>li>a {
+    text-decoration: none;
+    display: block;
+}
+
+.wrapper>header>.top-header>.sitemenu{
+    display: none; 
+}
+
+.wrapper>header>nav {
+    border: 1px solid;
+}
+
+.wrapper>header>nav>ul {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper>header>nav>ul>li {
+    border: 1px solid;
+    width: 130px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+    flex-grow: 1;
+    
+}
+
+.wrapper>header>nav>ul>li>a {
+    /* display: none; */
+   
+    
+}
+.wrapper>header>nav>ul>li>ul{
+
+    /* border: 1px solid; */
+    margin-top: 5px;
+    display: none;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    
+}
+.wrapper>header>nav>ul>li>ul>li{   
+    border: 1px solid;
+    
+    
+}
+
+.wrapper>header>nav>ul>li>ul>li>a{
+    
+}
+.wrapper>header>nav>ul>li:hover ul{
+    display: block;
+    
+    
+}
