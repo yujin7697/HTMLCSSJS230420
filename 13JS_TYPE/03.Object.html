@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="meow.sound()">짖어!</button><br/>
+    <button onclick="meow.toString()">확인</button><br/>
+    <script>
+
+        const meow = {
+            //속성
+            name : "먀옹",
+            kind : "시고르자브르종",
+            age : 1,
+            //기능
+            sound : function(){
+                alert(this.name + "이(가) 짖습니다." );
+            },
+            toString : function(){
+                alert("이름 : " + this.name + "\n나이 : " + this.age + 
+                "\n견종 : " + this.kind);
+            }
+        }
+        // meow.sound();
+        // meow.toString();
+
+        const myCar ={
+            //속성
+            owner : "소유자",
+            category : "차종",
+            fuelkind : "가솔린/디젤/LPG",
+            speed : "현재속도",
+            //기능
+            accel : function(){
+                alert("악셀을 밟습니다");
+            },
+            showInfo : function(){
+                alert("owner : " + this.owner + "\ncategory :" + this.category + "\nfuelkind : " + this.fuelkind
+                + "\nspeed :" + this.speed);
+            }
+        }
+        myCar.accel();
+        myCar.showInfo();
+
+    </script>
+
+</body>
+</html>

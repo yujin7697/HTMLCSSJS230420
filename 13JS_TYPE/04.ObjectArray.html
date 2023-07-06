@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['test1',"test2",20,true,null,{name : 'gigi',age : 5}];
+        //배열의 type 확인
+        // console.log(typeof arr);
+        //요소의 type 확인
+        // console.log(typeof arr[0]);
+        // console.log(typeof arr[1]);
+        // console.log(typeof arr[2]);
+        // console.log(typeof arr[3]);
+        // console.log(typeof arr[4]);
+        // console.log(typeof arr[5]);
+        //동적확장 여부 확인
+        // arr[6]=100;
+        // console.log(arr[6]);
+        // arr[10] = 200;
+        // console.log(arr[10]);
+        // console.log(arr);
+        // console.log(arr.length);
+        // console.log(typeof arr[7]);
+
+        //요소탐색(반복문)
+        // for(let i = 0; i<arr.length; i++){
+        //     console.log(arr[i]);
+        // }
+        // for(let i in arr){
+        //     console.log(arr[i]);
+        // }
+
+        //배열관련 매서드
+        // arr.push(200);  //마지막에 값추가
+        // arr.pop();      //마지막 값 제거
+        // arr.sort();     //정렬
+
+        //배열의 요소 탐색(중요)
+        arr.forEach((item)=>{console.log(item);})
+        //배열의 요소 필터링(중요)
+        let arr2 = [10,15.2,'t1','t2',30,true,null,100,{name : '티모',age : 222},20];
+        let returnArr = arr2.filter(item => typeof item == "number");
+        // console.log(returnArr);
+        // arr2.filter(item => typeof item == "number")
+        //     .sort(function(a,b){ return a-b; })
+        //     .forEach(item=>console.log(item))
+
+
+        //reduce((누산변수,요소변수) => {return 연산로직},누산변수초기값)
+        // let returnVal = arr2.filter(item => typeof item == "number")
+        //                     .reduce((sum,item)=>{
+        //                         console.log("Sum : ",sum," item :",item);
+        //                         return sum-item
+        //                     },0)
+        // console.log(returnVal);
+
+        // foreach((key,value)=>{로직}) //foreach를 이용해서 배열의 key,value로 받아올수있다
+        // let arr3 = [
+        //     {name:'홍길동',age:55},
+        //     {pid:'1011',age:55},
+        //     30,
+        //     {name:'홍길동',age:55},
+        //     50
+        // ];
+        
+        // arr3.forEach((key,value) =>{
+        //     if(typeof key === 'object'){
+        //         for(k in key){
+        //             console.log('key : ',k,'value : ',key[k])
+        //         }
+        //     }
+        //     else{
+        //         console.log("key : " + k + " value : " +value);
+        //     }
+        // })
+            // console.log("key : " +key +" value : " +value);
+        
+        // map + 일반배열
+        let arr4 = [10,20,30,40,50];
+
+        let rarr = arr4.map((item)=>{
+            return item+'%';
+        })
+        console.log(rarr);
+
+        let orderList = [
+            {oid : "111" ,addr:"대구",customer:"홍길동",tel : "010-4567-7897"},
+            {oid : "112" ,addr:"서울",customer:"동길동",tel : "010-4567-7896"},
+            {oid : "113" ,addr:"부산",customer:"서길동",tel : "010-4567-7895"},
+            {oid : "114" ,addr:"울산",customer:"남길동",tel : "010-4567-7894"},
+        ];
+        //object배열에서 oid외 tel만 추출
+
+        let rarr2 = orderList.map((item)=>({
+            oid:item.oid,
+            tel:item.tel
+        }))
+        console.log(rarr2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //Number
+        document.write(typeof 10 + "<br/>");    //자료형 typeof
+        document.write(typeof 10.5 + "<br/>");
+        //String
+        document.write(typeof "집가고싶어요" + "<br/>");
+        document.write(typeof '집가고싶어요'+ "<br/>");
+        document.write(typeof `집가고싶어요`+ "<br/>");
+        //Object
+        document.write(typeof {name : '유진',age : 22} + "<br/>");
+        document.write(typeof JSON.stringify({name : '유진',age : 22}) + "<br/>");
+        //null
+        let value1 = null; //변수초기화
+        document.write(typeof value1 + "<br/>");  //null도 object
+
+        //undefined
+        let value2; //변수정의
+        document.write(typeof value2 + "<br/>");
+        //boolean
+        document.write(typeof true + "<br/>");
+
+    </script>
+
+
+</body>
+</html>
