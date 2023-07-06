@@ -61,13 +61,23 @@
 
         // 총 결제 금액 map으로 추출
         // 1. 각 item당 price, amt를 추출(forEach,map,filter,reduce)
-        const step1 = order1.map((item)=>{
+        // 2. price*amt 구하고
+        // 3. price*amt 의 누적합 구하기
+        const total1= order1.map((item)=>{
             return {price:parseInt(item.price.replace(",","").replace("원","")),amt:item.amt}
         })
         console.log("step1",step1);
-        // 2. price*amt 구하고
-        // 3. price*amt 의 누적합 구하기
         
+        const total = step1.reduce((totalprice,item)=>{
+            const price = item.price;
+            const amt = item.amt;
+
+            return totalprice +(price*amt);
+        },0);
+        console.log("총 지불액 : ",total);
+        console.log("-----------------------------------------");
+
+
     </script>
 
 </body>
