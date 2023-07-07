@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ---------------------------------------------
+        // // object객체 : 객체를 다루는 기본함수를 제공
+        // ---------------------------------------------
+        
+        // let obj = {name : '홍길동',age:55}
+        // console.log(obj);
+        
+        // // 속성을 배열로 보여줌(obj의 key를 배열로 반환)
+        // console.log(Object.keys(obj))
+        
+        // // 속성값들을 배열로 보여줌(obj의 value를 배열로 반환)
+        // console.log(Object.values(obj))
+        
+        // // 키 value를 배열로 보여줌(열거가능한 속성[key,value]형태의 배열로 반환)
+        // console.log(Object.entries(obj))
+        
+        // // obj에 ob1,ob2 속성들을 복사
+        // let ob1 = {addr:'대구'}
+        // let ob2 = {gender:'M'}
+        // console.log(Object.assign(obj,ob1,ob2))
+        
+        // // 객체 수정 불가(이코드 이후로)
+        // Object.freeze(obj);
+        
+        // // 새속성 추가 불가
+        // Object.seal(obj);
+
+        // ---------------------------------------------------------------------------------
+        // Object.prototype : 객체가 상속을 구현하는데 사용되는 메커니즘, Object객체 내에 구성
+        // ---------------------------------------------------------------------------------
+        // Object.prototype
+        // 자바스크립트의 모든 객체가 상속하는 강사님 깃허브 참조
+        
+        // const ob = {name:'a',age:11}
+        // console.log(ob);
+        // console.log(Object.prototype);
+
+        // 생성자처럼 사용가능
+        function Person(name){
+            this.name=name;
+        }
+        let person1 = new Person('길똥이');
+        console.log(person1);
+        console.log(person1.toString());
+        console.log(person1.valueOf());
+        
+        // Person 프로토타입에 기능 추가
+        Person.prototype.hello = function(){
+            console.log("안녕하세요, 저는 "+this.name+" 입니다.");
+        }
+
+        let person2 = new Person('지니');
+        console.log(person2);
+        person2.hello();
+
+    </script>
+</body>
+</html>
