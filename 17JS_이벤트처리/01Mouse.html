@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1" style="width: 100px;height: 100px;border: 1px solid;margin-bottom: 50px;"></div>
+    <div id="d2" style="width: 100px;height: 100px;border: 1px solid;margin-bottom: 50px;"></div>
+    <div id="d3" style="width: 500px;height: 500px;border: 1px solid;"></div>
+    <script>
+        // click
+        const d1tg = document.getElementById('d1')
+        // d1tg.addEventListener('이벤트종류','함수의로직')
+        d1tg.addEventListener('click',function(){
+            this.innerHTML='<h3>튜브터진오구</h3>';
+        });
+        // mouseover,mouseleave
+        const d2tg = document.getElementById('d2')
+        d2tg.addEventListener('mouseover',function(){
+            this.innerHTML='<h3>경미니</h3>';
+        });
+        d2tg.addEventListener('mouseleave',function(){
+            this.innerHTML='<h3>망고릴라</h3>';
+        });
+        // drag,dragstart,dragend,drop,dragover.....
+        //
+        const d3tg = document.getElementById('d3')
+        d3tg.addEventListener('dragover',function(){
+            console.log('바보');
+            // 드랍요소를 인식할 수 있도록 기본 동작 취소
+            event.preventDefault();
+        });
+        d3tg.addEventListener('drop',function(event){
+            console.log('멍청이',event);
+            const files = event.dataTransfer.files;
+            for(i=0;i<files.length;i++){
+                const file = files[i];
+                console.log('file : ',file.name);
+                if(file.type.startsWith('image/')){
+                    const imgtg = document.createElement('img');
+                    imgtg.src=URL.createObjectURL(file);
+                    d3tg.appendChild(imgtg);
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
