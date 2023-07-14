@@ -1,0 +1,55 @@
+body{
+    width: 1024px;
+    height: 860px;
+    border: 1px solid red;
+}
+div{
+    display: flex;
+}
+#id{
+    width: 120px;
+    height: 50px;
+    margin: 5px;
+}
+#title{
+    width: 868px;
+    height: 50px;
+    margin: 5px;
+    /* position: relative; */
+    left: 87px;
+}
+#id,#title{
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 5px; */
+}
+#contents{
+    height: 500px;
+    width: 1000px;
+    border: 1px solid black;
+    margin: 5px;
+}
+#date{
+    width: 1000px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+}
+#comment{
+    width: 1000px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 5px;
+    
+}
+#comment_write{
+    width: 1000px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    left: 5px;
+
+    top: 50px;
+}

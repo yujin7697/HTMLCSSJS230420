@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --padding: 60px;
+}
+
+body {
+    width: 1024px;
+    height: 860px;
+}
+
+.box {
+    position: relative;
+    margin: 50px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: var(--padding);
+    background-color: lightgray;
+    border-radius: 7px;
+}
+
+.box input,
+.box button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+}
+
+.box input {
+    margin-bottom: 25px;
+    outline: 0;
+    transition: 0.5s;
+}
+
+
+.box button {
+    background-color: lightslategray;
+    color: white;
+    border-radius: 4px;
+}
+
+#id:focus-within{
+    outline: 1px solid gray;
+}
+#pw:focus-within{
+    outline: 1px solid gray;
+}
+
+.sign-up-box {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #86acd9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: var(--padding);
+    right: -35px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.sign-up-box i {
+    font-size: 1.9em;
+    color: #fff;
+}
