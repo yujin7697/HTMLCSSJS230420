@@ -11,32 +11,21 @@
 body {
     width: 1024px;
     height: 860px;
-    border: 1px solid red; 
 }
 
 .join {
     width: 278px;
     height: 50px;
     background-color: lightgray;
+    
     font-size: 1.2em;
+    font-weight: bold;
     color: gray;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px auto;
-}
-
-.게시판 {
-    width: 280px;
-    height: 50px;
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin: 50px auto; */
-    margin-top: 10px;
-    border-radius: 4px;
 }
 
 .box {
@@ -67,11 +56,15 @@ body {
 }
 
 .box button {
-    background-color: lightslategray;
+    background-color: gray;
     color: white;
     border-radius: 4px;
+    cursor: pointer;
 }
-
+.box button:hover,
+.box button:focus {
+  outline-offset: 3px;
+}
 #id {
     background-color: lightgray;
     border-radius: 4px;
