@@ -11,9 +11,36 @@
 body {
     width: 1024px;
     height: 860px;
+    border: 1px solid red; 
+}
+
+.join {
+    width: 278px;
+    height: 50px;
+    background-color: lightgray;
+    font-size: 1.2em;
+    color: gray;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.게시판 {
+    width: 280px;
+    height: 50px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 50px auto; */
+    margin-top: 10px;
+    border-radius: 4px;
 }
 
 .box {
+    border: 1px solid lightgray;
     position: relative;
     margin: 50px auto;
     width: 400px;
@@ -22,8 +49,8 @@ body {
     justify-content: center;
 
     padding: var(--padding);
-    background-color: lightgray;
     border-radius: 7px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .box input,
@@ -39,17 +66,27 @@ body {
     transition: 0.5s;
 }
 
-
 .box button {
     background-color: lightslategray;
     color: white;
     border-radius: 4px;
 }
 
-#id:focus-within{
+#id {
+    background-color: lightgray;
+    border-radius: 4px;
+}
+
+#pw {
+    background-color: lightgray;
+    border-radius: 4px;
+}
+
+#id:focus-within {
     outline: 1px solid gray;
 }
-#pw:focus-within{
+
+#pw:focus-within {
     outline: 1px solid gray;
 }
 
